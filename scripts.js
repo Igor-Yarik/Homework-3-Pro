@@ -1,32 +1,41 @@
-const userYearOfBirth = prompt('запитати у користувача рік народження;')
-const userCity = prompt('запитати в нього, в якому місті він живе;')
+/* const userYearOfBirth = prompt('запитати у користувача рік народження;') */
+const userCity = prompt('В якому місті ви проживаєте;')
 const userSport = prompt('запитати його улюблений вид спорту.')
 
-let date = new Date
-const userAge = (date.getFullYear() - userYearOfBirth)
+let Soccer = 'Футбол'
+let Hockey = 'Хоккей'
+let Basketball = 'Баскетбол'
 
-/* const capitalUkraine = ('Київ')
-const capitalUSA = ('Вашингтон')
-const capitalGB = ('Лондон') */
+let answerSoccer = 'Ви хочите стати футболістом'
+let answerHockey = 'Ви хочите стати хокеїстом'
+let answerBasketball = 'Ви хочите стати баскетболістом'
 
-if (userCity === 'Київ' || userCity === 'Kyiv' || userCity === 'Киев') {
-    console.log(`Ваш вік ${userAge} років; Ти живеш у столиці України`)
-} else if (userCity === 'Вашингтон' || userCity === 'Washington') {
-    console.log(`Ваш вік ${userAge} років; Ти живеш у столиці Сполучених Штатів Америки`)
-} else if (userCity === 'Лондон' || userCity === 'London') {
-    console.log(`Ваш вік ${userAge} років; Ти живеш у столиці Великобританії`)
+/* let date = new Date
+const userAge = (date.getFullYear() - userYearOfBirth) */
+
+
+if (userCity === 'Київ' || userCity === 'Киев' || userCity === 'Kyiv') {
+    alert(`Ви живете у столиці України;`)
+} else if (userCity === 'Лондон' || userCity === 'London') { 
+    alert(`Ви живете у столиці Великобританії;`)
+} else if (userCity === 'Вашингтон' || userCity === 'Washington') { 
+    alert('Ви живете у столиці Сполучених Штатів Америки')
 } else if (userCity === null) { 
-    console.log('Ну ты и Вася')
+    alert('Шкода, що Ви не захотіли ввести своє місце проживання')
 } else {
-    console.log(`Ваш вік ${userAge} років; ти живеш у місті ${userCity}`)
+    alert(`Ви живете у місті ${userCity}`)
 }
 
-if (userSport === 'Футбол') {
-    console.log('Круто! Хочеш стати Андрієм Шевченко?')
-} else if (userSport === 'Хоккей') {
-    console.log('Круто! Хочеш стати Андрієм Шевченко?')
-} else if (userSport === 'Баскетбол') {
-    console.log('Круто! Хочеш стати Андрієм Шевченко?')
-} else if (userSport === null) {
-    console.log('Как можно не увлекаться спортом???')
+
+    
+if (userSport === Soccer) {
+    console.log(` ${answerSoccer}`)
+} else if (userSport === Hockey) { 
+    console.log(`${answerHockey}`)
+} else if (userSport === Basketball) { 
+    console.log(`${answerBasketball}`)
+} else if (userCity === null) { 
+    console.log('Шкода, що Ви не захотіли ввести свій улюблений вид спорту')
+} else {
+    console.log(`${userSport}, це круто! Вперед до чемпіонства!`)
 }
